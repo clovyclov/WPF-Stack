@@ -20,9 +20,26 @@ namespace WpfApp4
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ApplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            MessageBox.Show("The description is: " + DescriptionText.Text);
+        }
+
+        private void ResetBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WeldCheck.IsChecked = false;
+        }
+
+        private void Check_Checked(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show( (String)((CheckBox)sender).Content);
         }
     }
 }
